@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteBase /pdblog
+
+RewriteRule ^(\d{4})/(\d{2})/(\d{2})/(.*) single_post.php?Y=$1&M=$2&D=$3&Slug=$4 [QSA,NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\.html$ $1.php?%{QUERY_STRING} [NC,L]
+
+RewriteRule /\_.*\.php - [NC,F]
+
