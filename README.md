@@ -10,7 +10,7 @@ PDBlog is a minimalist blog implemented using PHP and DynamoDB.
 * Linux and Apache 2.4
   * mod_rewrite enabled and configurable via .htaccess
 * one of:
-  * DynamoDB Local
+  * [DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html)
   * an EC2 instance with access to DynamoDB (preferably using an IAM role)
   * a Lightsail instance
 
@@ -26,6 +26,7 @@ git clone git@github.com:sporter42/pdblog.git
 * edit www/_init.php to reflect the correct path to your autoload files
 * edit www/_pdblog_config.php
   * set $pdblog_blog_full_base_url to the URL that points to the www files
+  * set $pdblog_dynamodb_connection to connect to your DynamoDB installation; the default configuration will connect to DynamoDB Local running on localhost port 8000
 * move "scripts" to a non-web-accesible directory
 * edit scripts/add_user.php
   * to reflect the correct path to your autoload files
