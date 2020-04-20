@@ -3,20 +3,19 @@ PDBlog is a minimalist blog implemented using PHP and DynamoDB.
 
 ## Requirements
 
-* [DynamoDB](https://aws.amazon.com/dynamodb/)
+* DynamoDB, by way of one of:
+  * [DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html)
+  * an EC2 instance with access to DynamoDB (preferably using an IAM role)
+  * a Lightsail instance and an IAM User with access to DynamoDB
 * PHP 7.1 or later, plus the following libraries
   * [PHP Markdown](https://github.com/michelf/php-markdown)
   * [AWS SDK for PHP](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/getting-started_installation.html)
 * Linux and Apache 2.4
   * mod_rewrite enabled and configurable via .htaccess
-* one of:
-  * [DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html)
-  * an EC2 instance with access to DynamoDB (preferably using an IAM role)
-  * a Lightsail instance
 
 ## Installation
 ```bash
-git clone git@github.com:sporter42/pdblog.git
+$ git clone git@github.com:sporter42/pdblog.git
 ```
 
 ### Basic Configuration
